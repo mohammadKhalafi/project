@@ -12,12 +12,11 @@ import java.util.ArrayList;
 
 public class ClientDataController {
 
-    private static ArrayList<String>  menusNeedUserForRequest = new ArrayList<>();
+    private final static ArrayList<String>  menusNeedUserForRequest = new ArrayList<>();
 
     static {
         menusNeedUserForRequest.add("Profile Menu");
         menusNeedUserForRequest.add("Deck Menu");
-        menusNeedUserForRequest.add("Scoreboard Menu");
         menusNeedUserForRequest.add("Shop Menu");
     }
 

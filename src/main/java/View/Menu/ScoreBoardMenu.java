@@ -37,6 +37,8 @@ public class ScoreBoardMenu extends Menu {
 
             handleCommandsStartWithMenu(command);
 
+            help(command);
+
             if (!commandIsDone) {
                 Printer.printInvalidCommand();
             }
@@ -64,13 +66,16 @@ public class ScoreBoardMenu extends Menu {
         }
     }
 
-    private void help(){
-        System.out.println("""
-                scoreboard show
-                help
-                menu show-current
-                menu [menu name]
-                menu exit""");
+    private void help(String command){
+        if(command.equals("help")) {
+            commandIsDone=true;
+            System.out.println("""
+                    scoreboard show
+                    help
+                    menu show-current
+                    menu [menu name]
+                    menu exit""");
+        }
     }
 
 }
